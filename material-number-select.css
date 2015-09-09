@@ -1,0 +1,48 @@
+/* Material Number Select */
+
+* {
+  border: 0;
+  box-sizing: inherit;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 10px; /* rem = 10px  */
+}
+
+body {
+  font-size: 1.6rem;
+  padding: 2rem;
+}
+
+h1 {
+  font-size: 2em;
+  line-height: 1em;
+}
+
+.number-select-input {
+  background-color: #efefef;
+  height: 100%;
+  overflow: auto;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+.number-select-input-cancel {
+  background-color: #cc0000;
+  color: #efefef;
+  height: 64px;
+}
+
+.number-select-input-option {
+  height: 64px;
+}
+
+.selectable {
+  display: block;
+}
