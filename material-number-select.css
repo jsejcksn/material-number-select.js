@@ -15,22 +15,55 @@ html {
 
 body {
   font-size: 1.6rem;
-  padding: 2rem;
 }
 
 h1 {
+  display: inline-block;
   font-size: 2em;
   line-height: 1em;
+}
+
+h2 {
+  font-size: 1.5em;
+  line-height: 1em;
+  margin-top: 0;
+}
+
+header {
+  background-color: #cccccc;
+  color: #ffffff;
+  padding: 2rem
+}
+
+section {
+  padding: 2rem;
+  vertical-align: top;
+}
+
+select {
+  display: block;
+}
+
+.example-select-container {
+  display: inline-block;
+  margin-left: 1rem;
+  vertical-align: top;
+}
+
+.no-scroll {
+  overflow: hidden;
 }
 
 .number-select-input {
   background-color: #efefef;
   height: 100%;
+  margin: 0;
   overflow: auto;
+  padding: 0;
   width: 100%;
   position: fixed;
-  bottom: 0;
   left: 0;
+  top: 0;
 }
 
 .number-select-input-cancel {
@@ -41,8 +74,4 @@ h1 {
 
 .number-select-input-option {
   height: 64px;
-}
-
-.selectable {
-  display: block;
 }
