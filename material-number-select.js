@@ -7,6 +7,12 @@ var mdlNumberSelect = (function() {
     selectElement = '',
     selection = 0;
 
+  function activate(selectElementID) {
+    document.getElementById(selectElementID).addEventListener('click', function() {
+      mdlNumberSelect.numberSelect(selectElementID);
+    });
+  }
+
   function cancelSelect() {
     console.log('Selection canceled');
     this.removeEventListener('click', cancelSelect);
@@ -16,6 +22,7 @@ var mdlNumberSelect = (function() {
   function numberSelect(selectElementID) {
     selectElement = document.getElementById(selectElementID);
     var arr = selectElement.options;
+    selectElement.blur();
     selectElement.setAttribute('disabled', 'disabled');
 
     var numberInput = document.createElement('div');
@@ -54,6 +61,7 @@ var mdlNumberSelect = (function() {
   }
 
   return {
+    activate: activate,
     numberSelect: numberSelect
   };
 
