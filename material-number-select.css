@@ -1,60 +1,12 @@
-/* Material Number Select */
-
-* {
-  border: 0;
-  box-sizing: inherit;
-  font-weight: normal;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  box-sizing: border-box;
-  font-size: 10px; /* rem = 10px  */
-}
-
-body {
-  font-size: 1.6rem;
-}
-
-h1 {
-  display: inline-block;
-  font-size: 2em;
-  line-height: 1em;
-}
-
-h2 {
-  font-size: 1.5em;
-  line-height: 1em;
-  margin-top: 0;
-}
-
-header {
-  background-color: #cccccc;
-  color: #ffffff;
-  padding: 2rem
-}
-
-section {
-  padding: 2rem;
-  vertical-align: top;
-}
-
-select {
-  display: block;
-}
-
-.example-select-container {
-  display: inline-block;
-  margin-left: 1rem;
-  vertical-align: top;
-}
+/* Material Number Select -- v0.3.0 -- https://github.com/jsejcksn/material-number-select/ */
 
 .no-scroll {
+  height: 0;
   overflow: hidden;
+  width: 0;
 }
 
-.number-select-input {
+.mdl-number-select-input {
   background-color: #efefef;
   height: 100%;
   margin: 0;
@@ -66,12 +18,12 @@ select {
   top: 0;
 }
 
-.number-select-input-cancel {
+.mdl-number-select-input-cancel {
   background-color: #cc0000;
   color: #efefef;
   height: 64px;
 }
 
-.number-select-input-option {
+.mdl-number-select-input-option {
   height: 64px;
 }
