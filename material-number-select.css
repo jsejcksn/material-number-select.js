@@ -1,10 +1,11 @@
 /* Material Number Select -- v0.3.1 -- https://github.com/jsejcksn/material-number-select/ */
 
-body {
+.mdl-expand {
+  background-color: #efefef;
   height: 100%;
 }
 
-.no-scroll {
+.mdl-no-scroll {
   height: 0;
   overflow: hidden;
   width: 0;

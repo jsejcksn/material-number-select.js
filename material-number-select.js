@@ -1,4 +1,4 @@
-/* Material Number Select -- v0.3.0 -- https://github.com/jsejcksn/material-number-select/ */
+/* Material Number Select -- v0.3.1 -- https://github.com/jsejcksn/material-number-select/ */
 
 var mdlNumberSelect = (function() {
   'use strict';
@@ -25,7 +25,9 @@ var mdlNumberSelect = (function() {
     scrollDist = document.body.scrollTop;
     selectedElement.blur(); // Prevents default iOS number wheel
     selectedElement.setAttribute('disabled', 'disabled'); // Safeguard
-    document.body.firstElementChild.className += ' no-scroll'; // Keep body from scrolling underneath input view
+    document.body.firstElementChild.className += ' mdl-no-scroll'; // Keep body from scrolling underneath input view
+    document.body.className += ' mdl-expand'; // Make body bg-color match input view and expand height to full viewport
+    window.scrollTo(0, 0);
 
     // Create view
     var numberInput = document.createElement('div');
@@ -58,6 +60,7 @@ var mdlNumberSelect = (function() {
 
   // Restore scrolling to body
   function restoreClass() {
+    document.body.className = bodyClassName;
     document.body.firstElementChild.className = firstChildClass;
   }
 
