@@ -6,7 +6,7 @@ This component manipulates `<select>` elements containing number options into an
 
 After adding the appropriate namespaced `class`, each `<select>` element is automatically activated when the user selects the element and automatically deactivated after the user makes a selection. It consists of a CSS file and a JavaScript file. You will need to include these and the hosted [Material Design Lite master files](http://www.getmdl.io/started/index.html#download) as `<link>` and `<script>` elements in your HTML files.
 
-You can view an example page [here](http://jsejcksn.github.io/material-number-select/). I recommend using Chrome's Dev Tools mobile emulation to see how it shines.
+You can view an example page [here](http://jsejcksn.github.io/material-number-select/). I recommend using [Chrome's Dev Tools mobile emulation](https://developer.chrome.com/devtools/docs/device-mode) to see how it shines.
 
 ## Usage
 
@@ -26,7 +26,12 @@ and add this just before the closing of your `</body>` element:
 <script src="path/to/material-number-select.js"></script>
 ````
 
+Due to the way mobile browsers ignore CSS `overflow` rules, you must also wrap all of your `<body>` code in a containing element such as a `<div>` or a `<main>` until I eventually determine a potential workaround.
+
 ## Release Notes
+
+### v 0.3.1
+Fix iOS scrolling issue.
 
 ### v 0.3.0
 *Still in beta.* It's only focused on mobile at present, and there is small bug when scrolling on iOS browsers that I still need to take a look at.
