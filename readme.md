@@ -26,7 +26,7 @@ and add this just before the closing of your `</body>` element:
 <script src="path/to/material-number-select.js"></script>
 ````
 
-Due to the way mobile browsers ignore CSS `overflow` rules, you must also wrap all of your `<body>` code in a containing element such as a `<div>` or a `<main>` until I eventually determine a potential workaround.
+Due to the way mobile browsers seem to ignore CSS `overflow` rules on the `<html>` and `<body>` elements, you must also wrap all of your `<body>` code in a containing element such as a `<div>` or a `<main>` until I eventually determine a potential workaround.
 
 ## Release Notes
 
