@@ -1,29 +1,14 @@
-/* Material Number Select -- v0.3.2 -- https://github.com/jsejcksn/material-number-select/ */
+/* Material Number Select -- v0.4.0 -- https://github.com/jsejcksn/material-number-select.js/ */
 
 (function() {
   'use strict';
 
-  var wrapper;
-
-  // Wrap body contents into containing <div>
-  (function() {
-    var div = document.createElement("div");
-
-    // Move the body's children into this wrapper
-    while (document.body.firstChild) {
-      div.appendChild(document.body.firstChild);
-    }
-
-    // Append the wrapper to the body
-    document.body.appendChild(div);
-    wrapper = div;
-  }());
-
   var activeElements = document.getElementsByClassName('mdl-number-select'),
     bodyClassName = document.body.className,
-    firstChildClass = wrapper.className,
+    firstChildClass,
     scrollDist = 0,
-    selectedElement;
+    selectedElement,
+    wrapper;
 
   // Cancels number select input view
   function cancelSelect() {
@@ -100,6 +85,29 @@
     });
   }
 
-  return {};
+  // Wrap body contents into containing <div>
+  (function() {
+    var div = document.createElement("div");
+
+    // Move the body's children into this wrapper
+    while (document.body.firstChild) {
+      div.appendChild(document.body.firstChild);
+    }
+
+    // Append the wrapper to the body
+    document.body.appendChild(div);
+    wrapper = div;
+    firstChildClass = wrapper.className;
+  }());
+
+  // Add CSS to <head>
+  (function() {
+    var head = document.head,
+      style = document.createElement('style'),
+      css = '.mdl-expand {background-color: #efefef;height: 100%;} .mdl-no-scroll {height: 0;overflow: hidden;width: 0;} .mdl-number-select-input {background-color: #efefef;height: 100%;margin: 0;padding: 0;width: 100%;} .mdl-number-select-input-cancel {background-color: #cc0000;color: #efefef;height: 64px;} .mdl-number-select-input-option {height: 64px;}';
+
+    style.innerHTML = css;
+    head.appendChild(style);
+  }());
 
 }());
