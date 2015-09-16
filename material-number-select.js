@@ -1,13 +1,29 @@
 /* Material Number Select -- v0.3.1 -- https://github.com/jsejcksn/material-number-select/ */
 
-var mdlNumberSelect = (function() {
+(function() {
   'use strict';
+
+  var wrapper;
+
+  // Wrap body contents into containing <div>
+  (function() {
+    var div = document.createElement("div");
+
+    // Move the body's children into this wrapper
+    while (document.body.firstChild) {
+      div.appendChild(document.body.firstChild);
+    }
+
+    // Append the wrapper to the body
+    document.body.appendChild(div);
+    wrapper = div;
+  }());
 
   var activeElements = document.getElementsByClassName('mdl-number-select'),
     bodyClassName = document.body.className,
-    firstChildClass = document.body.firstElementChild.className,
+    firstChildClass = wrapper.className,
     scrollDist = 0,
-    selectedElement = '';
+    selectedElement;
 
   // Cancels number select input view
   function cancelSelect() {
@@ -25,7 +41,7 @@ var mdlNumberSelect = (function() {
     scrollDist = document.body.scrollTop;
     selectedElement.blur(); // Prevents default iOS number wheel
     selectedElement.setAttribute('disabled', 'disabled'); // Safeguard
-    document.body.firstElementChild.className += ' mdl-no-scroll'; // Keep body from scrolling underneath input view
+    wrapper.className += ' mdl-no-scroll'; // Keep body from scrolling underneath input view
     document.body.className += ' mdl-expand'; // Make body bg-color match input view and expand height to full viewport
     window.scrollTo(0, 0);
 
@@ -61,7 +77,7 @@ var mdlNumberSelect = (function() {
   // Restore scrolling to body
   function restoreClass() {
     document.body.className = bodyClassName;
-    document.body.firstElementChild.className = firstChildClass;
+    wrapper.className = firstChildClass;
   }
 
   // Return selection from number input view
@@ -86,4 +102,4 @@ var mdlNumberSelect = (function() {
 
   return {};
 
-})();
+}());
