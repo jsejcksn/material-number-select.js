@@ -8,6 +8,8 @@ After adding the appropriate namespaced `class`, each `<select>` element is auto
 
 You can view an example page [here](http://jsejcksn.github.io/material-number-select/). I recommend using [Chrome's Dev Tools mobile emulation](https://developer.chrome.com/devtools/docs/device-mode) to see how it shines.
 
+*Note: Due to the way mobile browsers seem to ignore CSS `overflow` rules on the `<html>` and `<body>` elements, all of your `<body>` code must be wrapped in a containing element such as a `<div>` You don't have to make any changes to your code; the JavaScript file takes care of that automatically.*
+
 ## Usage
 
 Download [`material-number-select.css`](material-number-select.css) and [`material-number-select.js`](material-number-select.js). Put them wherever you'd like in your site structure and add the following information to your html's `<head>`:
@@ -26,9 +28,10 @@ and add this just before the closing of your `</body>` element:
 <script src="path/to/material-number-select.js"></script>
 ````
 
-Due to the way mobile browsers seem to ignore CSS `overflow` rules on the `<html>` and `<body>` elements, you must also wrap all of your `<body>` code in a containing element such as a `<div>` or a `<main>` until I eventually determine a potential workaround.
-
 ## Release Notes
+
+### v 0.3.2
+Automatically wrap code in container div
 
 ### v 0.3.1
 Fix iOS scrolling issue.
