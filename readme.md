@@ -14,18 +14,18 @@ You can view an example page [here](https://jsejcksn.github.io/material-number-s
 
 Download [`material-number-select.js`](material-number-select.js). Put it wherever you'd like in your site structure and add the following information to your html's `<head>`:
 
-```` html
+```html
 <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.min.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> <!--Optional-->
 <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css"> <!--Optional-->
-````
+```
 
 and add this just before the closing of your `</body>` element:
 
-```` html
+```html
 <script src="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.min.js"></script>
 <script src="path/to/material-number-select.js"></script>
-````
+```
 
 ## Release Notes
 
