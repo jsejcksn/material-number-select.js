@@ -1,4 +1,4 @@
-/* Material Number Select -- v0.4.0 -- https://github.com/jsejcksn/material-number-select.js/ */
+/* Material Number Select -- v0.4.1 -- https://github.com/jsejcksn/material-number-select.js/ */
 
 (function() {
   'use strict';
