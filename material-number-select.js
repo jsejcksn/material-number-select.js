@@ -83,7 +83,7 @@
     activeElements[i].addEventListener('mousedown', function(e) {
       e.preventDefault();
       numberSelect(this);
-    }, false);
+    });
   }
 
   // Wrap body contents into containing <div>
