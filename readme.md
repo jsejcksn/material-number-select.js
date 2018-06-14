@@ -29,14 +29,18 @@ and add this just before the closing of your `</body>` element:
 
 ## Release Notes
 
+### v 0.4.1
+Add `preventDefault` on `mousedown` event to avoid flash of default input control on non-touch devices (from [kennycoc](https://github.com/kennycoc))
+
 ### v 0.4.0
-Inject CSS styling to document head. Project becomes *material-number-select.js*.
+- Inject CSS styling to document head
+- Project becomes *material-number-select.js*
 
 ### v 0.3.2
 Automatically wrap code in container div
 
 ### v 0.3.1
-Fix iOS scrolling issue.
+Fix iOS scrolling issue
 
 ### v 0.3.0
 *Still in beta.* It's only focused on mobile at present, and there is small issue when scrolling on iOS browsers that I still need to take a look at.
