@@ -1,4 +1,4 @@
-/* Material Number Select -- v0.4.0 -- https://github.com/jsejcksn/material-number-select.js/ */
+/* Material Number Select -- v0.4.1 -- https://github.com/jsejcksn/material-number-select.js/ */
 
 (function() {
   'use strict';
@@ -80,7 +80,8 @@
 
   // Add event listener to each select element having class="mdl-number-select"
   for (var i = 0; i < activeElements.length; i++) {
-    activeElements[i].addEventListener('click', function() {
+    activeElements[i].addEventListener('mousedown', function(e) {
+      e.preventDefault();
       numberSelect(this);
     });
   }
